@@ -4,6 +4,16 @@ Frontend de Banco Atlántida para ver cuentas, registrar transferencias y consul
 
 **Stack:** React 19 · TypeScript · Vite · React Router · Tailwind CSS.
 
+## Demo en línea (Render)
+
+| Pieza    | URL                                             |
+| -------- | ----------------------------------------------- |
+| Frontend | https://prueba-atlantida-web.onrender.com       |
+| API      | https://prueba-atlantida-api-1.onrender.com/api |
+
+1. Abrir primero https://prueba-atlantida-api-1.onrender.com/api/accounts y esperar la respuesta: el servicio gratuito se suspende tras 15 minutos sin uso.
+2. Luego abrir https://prueba-atlantida-web.onrender.com.
+
 ## Requisitos
 
 - Node.js 22.12 o superior y npm
@@ -20,19 +30,19 @@ Abrir `http://localhost:5173`.
 
 La URL del backend se configura con `VITE_API_URL` (ver `.env.example`); por defecto `http://localhost:8080`.
 
-| Comando | Uso |
-|---|---|
-| `npm run dev` | servidor de desarrollo |
+| Comando         | Uso                            |
+| --------------- | ------------------------------ |
+| `npm run dev`   | servidor de desarrollo         |
 | `npm run build` | build de producción en `dist/` |
-| `npm run lint` | análisis estático |
+| `npm run lint`  | análisis estático              |
 
 ## Pantallas
 
-| Ruta | Pantalla |
-|---|---|
-| `/` | Lista de cuentas (ID, titular, saldo) |
+| Ruta              | Pantalla                                                                                                                       |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| `/`               | Lista de cuentas (ID, titular, saldo)                                                                                          |
 | `/transferencias` | Formulario de transferencia, resultado exitoso con saldos anterior y nuevo, y transferencia rechazada con el mensaje de la API |
-| `/cuentas/:id` | Historial de transferencias de la cuenta |
+| `/cuentas/:id`    | Historial de transferencias de la cuenta                                                                                       |
 
 ## Decisiones técnicas
 
